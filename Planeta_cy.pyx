@@ -16,7 +16,7 @@ cdef class Planet(object):
         #Masa
         self.m = 1.0
 
-cdef single_step(planet, dt):
+cdef void single_step(planet, dt):
     '''Dar un paso'''
 
     #Calcular fuerza: gravedad al origen
