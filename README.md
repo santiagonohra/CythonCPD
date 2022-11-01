@@ -13,7 +13,7 @@ Clonar el repositorio
 
 Compilar el módulo de Cython
 
-`python3 setup.py build_ext --inplace`
+`make all`
 
 Con esto anterior se obtiene un fichero `.so`, el cual permite importar el modulo escrito en Cython a un programa de Python tradicional, tal como una biblioteca.
 
@@ -29,6 +29,6 @@ Para ejecutar la prueba incluida, simplemente se ejecuta:
 
 `python3 main.py`
 
-En este fichero `main.py` se hace una prueba del modulo `Planeta_py.py` y `Planeta_cy.pyx` con `1,000,000` de steps y en un time_frame de `100`. Como salida se muestra en la terminal el tiempo de ejecución con Cython, con Python, y la relación entre estos.
+En este fichero `main.py` se hace una prueba del modulo `Planeta_py.py` y `Planeta_cy.pyx` con `2,000,000` de steps y en un time_frame de `400`. Como salida se muestra en un fichero `.csv` con los tiempos de ejecución en python y cython respectivamente.
 
 
