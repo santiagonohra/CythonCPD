@@ -1,7 +1,14 @@
 from math import sqrt
+'''
+Se requiere la raiz cuadrada:
+    Se instancia como funcion externa
+    y se prepara para multihilo
+'''
+#cdef extern from "math.h":
+#    double sqrt(double x) nogil
 
 cdef class Planet(object):
-
+    #Declaracion de variables publicas
     cdef public double x, y, z, vx, vy, vz, m
 
     def __init__(self):
@@ -16,8 +23,9 @@ cdef class Planet(object):
         #Masa
         self.m = 1.0
 
-cdef void single_step(planet, dt):
+cdef void single_step(Planet planet, double dt):
     '''Dar un paso'''
+
 
     #Calcular fuerza: gravedad al origen
     cdef double distance = sqrt(planet.x**2 + planet.y**2 + planet.z**2)
