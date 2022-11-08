@@ -35,7 +35,7 @@ planet_cy.vz = 0.034*10**3
 planet_cy.m = 5.97424*10**24
 
 #Se consideran las otras variables
-steps = 2000000
+steps = 4000000
 time_span = 400
 
 #Formato para el fichero de salida
@@ -43,7 +43,7 @@ formato_datos = "{:.5f},{:.5f}\n"
 
 
 #Definicion de experimentos, reduccion de ruido gaussiano
-for i in range(5):
+for i in range(30):
 
     #Toma de tiempos para python
     init_time=time.time()
@@ -59,7 +59,7 @@ for i in range(5):
 
     time_cython = end_time - init_time
 
-    with open("planeta.csv", "a") as archivo:
+    with open("planeta_4m_steps.csv", "a") as archivo:
         archivo.write(formato_datos.format(time_python, time_cython))
 
 
