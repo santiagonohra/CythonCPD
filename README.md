@@ -31,4 +31,6 @@ Para ejecutar la prueba incluida, simplemente se ejecuta:
 
 En este fichero `main.py` se hace una prueba del modulo `Planeta_py.py` y `Planeta_cy.pyx` con `2,000,000` de steps y en un time_frame de `400`. Como salida se muestra en un fichero `.csv` con los tiempos de ejecución en python y cython respectivamente.
 
+En este [cuaderno](https://colab.research.google.com/drive/1aAh4L9k3dd6p7Fxgtnty83iSV_PqdPM8?usp=sharing) se puede visualizar un estudio y análisis de resultados y rendmiento de Cython y Python con este simulador planetario.
+
 
